@@ -2,4 +2,11 @@
     <dimen name="fab_margin">16dp</dimen>
 
     <dimen name="default_text_size">20sp</dimen>
+    <dimen name="button_text_size">16sp</dimen>
+    <dimen name="radio_text_size">16sp</dimen>
+    <dimen name="pacman_size">14dp</dimen>
+    <dimen name="radio_margin">8dp</dimen>
+    <dimen name="layout_margin">20dp</dimen>
+    <dimen name="button_height">60dp</dimen>
+    <dimen name="thumbnail_height">200dp</dimen>
 </resources>

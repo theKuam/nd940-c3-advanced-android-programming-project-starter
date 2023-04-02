@@ -1,11 +1,92 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.motion.widget.MotionLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:layout_margin="@dimen/layout_margin"
+    app:layoutDescription="@xml/content_detail_scene"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:context=".DetailActivity"
     tools:showIn="@layout/activity_detail">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <TextView
+        android:id="@+id/txtFileNameTitle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/file_name_title"
+        android:textColor="@color/gray"
+        android:textSize="@dimen/default_text_size"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="TextContrastCheck" />
+
+    <TextView
+        android:id="@+id/txtFileName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="100dp"
+        android:layout_marginEnd="32dp"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="@dimen/default_text_size"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/txtFileNameTitle"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="@string/title_glide" />
+
+    <TextView
+        android:id="@+id/txtFileStatusTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/layout_margin"
+        android:text="@string/file_status_title"
+        android:textColor="@color/gray"
+        android:textSize="@dimen/default_text_size"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/txtFileName"
+        tools:ignore="TextContrastCheck" />
+
+    <TextView
+        android:id="@+id/txtFileStatus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/layout_margin"
+        android:text="@string/file_name_title"
+        android:textSize="@dimen/default_text_size"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@id/txtFileName"
+        app:layout_constraintTop_toBottomOf="@id/txtFileName"
+        tools:text="@string/download_successful"
+        tools:textColor="@color/colorPrimaryDark" />
+
+    <Button
+        android:id="@+id/backButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/layout_margin"
+        android:layout_marginVertical="@dimen/layout_margin"
+        android:background="@color/colorAccent"
+        android:text="@string/OK"
+        android:textColor="@color/white"
+        android:textSize="@dimen/default_text_size"
+        app:layout_constraintBottom_toBottomOf="parent"
+        tools:ignore="DuplicateClickableBoundsCheck,TextContrastCheck,VisualLintOverlap,VisualLintButtonSize"
+        tools:layout_editor_absoluteX="20dp" />
+
+    <Button
+        android:id="@+id/showStatusButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/layout_margin"
+        android:layout_marginHorizontal="@dimen/layout_margin"
+        android:background="@color/colorAccent"
+        android:focusable="true"
+        android:text="@string/notification_button"
+        android:textColor="@color/white"
+        android:textSize="@dimen/default_text_size"
+        app:layout_constraintBottom_toBottomOf="parent"
+        tools:ignore="TextContrastCheck,VisualLintButtonSize"
+        tools:layout_editor_absoluteX="20dp" />
+
+</androidx.constraintlayout.motion.widget.MotionLayout>
